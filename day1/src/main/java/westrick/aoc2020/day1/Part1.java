@@ -15,7 +15,7 @@ import java.util.stream.Collectors;
 public class Part1 {
     public static void main(String[] args) {
         // Read input
-        try (BufferedReader input = new BufferedReader(new InputStreamReader(Part1.class.getResourceAsStream("/input")))) {
+        try (BufferedReader input = new BufferedReader(new InputStreamReader(Part1.class.getResourceAsStream("/day1/input")))) {
             List<Integer> data = input.lines().map(Integer::parseInt).collect(Collectors.toList());
             // Search
             for (int i=0; i<data.size()-1; ++i) {

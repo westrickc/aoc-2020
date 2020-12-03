@@ -16,7 +16,7 @@ public class Part2 {
 
     public static void main(String[] args) {
         // Read input
-        try (BufferedReader input = new BufferedReader(new InputStreamReader(Part1.class.getResourceAsStream("/input")))) {
+        try (BufferedReader input = new BufferedReader(new InputStreamReader(Part1.class.getResourceAsStream("/day1/input")))) {
             List<Integer> data = input.lines().map(Integer::parseInt).collect(Collectors.toList());
             // Search
             for (int i = 0; i < data.size() - 2; ++i) {
