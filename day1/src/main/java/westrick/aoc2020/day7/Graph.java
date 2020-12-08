@@ -41,4 +41,20 @@ public class Graph {
         }
     }
     
+    public int childrenCount(String bag) {
+        return childrenCount(bagToIndex.get(bag));
+    }
+
+    private int childrenCount(int bagIndex) {
+        int total = 0;
+        for(int i=0; i<edges.length; ++i) {
+            int count = edges[bagIndex][i];
+            if (count > 0) {
+                total += count;
+                total += count * childrenCount(i);
+            }
+        }
+        return total;
+    }
+    
 }
